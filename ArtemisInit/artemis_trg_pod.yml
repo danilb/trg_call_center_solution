@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: artemis-pod
+  labels:
+    app: activemq-artemis
+spec:
+  containers:
+  - name: activemq-artemis
+    image: vromero/activemq-artemis:2.12-alpine-latest
+    env:
+    - name: ARTEMIS_USERNAME
+      value: "trg"
+    - name: ARTEMIS_PASSWORD
+      value: "trg"
